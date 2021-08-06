@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
         <div class="app-title">
             <p>Weather</p>
         </div>
+        <div class="inputs"><input class="cityInput" type="text" placeholder="Search a major city"> <button onclick="getWeather()"><i class="fas fa-search"></i></button></div>
         <div class="notification"></div>
         <div class="weather-container">
             <div class="weather-icon">

@@ -8,6 +8,12 @@ body{
     background-color: #3f5fd6;
 }
 
+.inputs {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
+
 .container{
     width: 300px;    
     background-color: #FFF;

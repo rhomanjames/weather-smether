@@ -5,6 +5,7 @@ const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
+let cityName = document.querySelector(".cityInput").value;
 
 // App data
 const weather = {};
@@ -19,7 +20,7 @@ const KELVIN = 273;
 const key = "29330c871ee61664bde3e94595f4a757";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
-if('geolocation' in navigator){
+/*if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 }else{
     notificationElement.style.display = "block";
@@ -28,8 +29,8 @@ if('geolocation' in navigator){
 
 // SET USER'S POSITION
 function setPosition(position){
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+   // let latitude = position.coords.latitude;
+   // let longitude = position.coords.longitude;
     
     getWeather(latitude, longitude);
 }
@@ -38,11 +39,14 @@ function setPosition(position){
 function showError(error){
     notificationElement.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
-}
+} */
 
 // GET WEATHER FROM API PROVIDER
-function getWeather(latitude, longitude){
-    let api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+function getWeather(){
+    let cityName = document.querySelector(".cityInput").value;
+
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;    
+    // let api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function(response){
