@@ -45,7 +45,7 @@ function showError(error){
 function getWeather(){
     let cityName = document.querySelector(".cityInput").value;
 
-    let api = "https" + `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;    
+    let api = `"https" + https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;    
     // let api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
