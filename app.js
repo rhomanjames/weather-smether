@@ -45,7 +45,7 @@ function showError(error){
 function getWeather(){
     let cityName = document.querySelector(".cityInput").value;
     
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=boston&appid=29330c871ee61664bde3e94595f4a757`;    
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=29330c871ee61664bde3e94595f4a757`;    
     // let api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
