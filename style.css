@@ -5,7 +5,10 @@
 }
 
 body{
-    background-color: #3f5fd6;
+    background: linear-gradient(rgb(160, 160, 226), rgb(96, 96, 255));
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .inputs {
@@ -16,7 +19,7 @@ body{
 
 .container{
     width: 300px;    
-    background-color: #FFF;
+    background-color: rgb(255, 255, 255);
     align-items: center;
     
     display: block;
